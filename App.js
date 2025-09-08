@@ -1,9 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import ElectricKettle from './assets/images/electricKettle.jpg'
+import { useState } from 'react';
 
 
 export default function App() {
+
+  const [isDeviceOn, setIsDeviceOn ] = useState(false);
+
+  const handleToggle = () => {
+    setIsDeviceOn(!isDeviceOn) // flipx state to opposite
+    console.log('Device is now: ', !isDeviceOn ? 'On' : 'Off');
+  };
 
   return (
 
@@ -20,10 +28,22 @@ export default function App() {
             <Text style={styles.deviceName}>Electric Kettle</Text>
             <Text style={styles.deviceLocation}>Kitchen</Text>
           </View>
+
           {/* right */}
-          <View style={styles.toggleButton}>
-            <Text style={styles.placeholderText}>Toggle</Text>
-          </View>
+          <TouchableOpacity style={[
+            styles.toggleButton,
+            isDeviceOn ? styles.toggleOn : styles.toggleOff
+          ]}
+            onPress={handleToggle}
+          >
+            <View style={[styles.toggleCircle, 
+              isDeviceOn ? styles.circleOn : styles.circleOff
+            ]}
+            >
+
+            </View>
+             
+          </TouchableOpacity>
         </View>
 
         {/* Bottom */}
@@ -71,7 +91,6 @@ const styles = StyleSheet.create({
     // flex: 1
   },
   deviceName: {
-    display: 'flex',
     fontSize: 16,
     color: '#ffffff',
     fontWeight: 'bold',
@@ -84,14 +103,39 @@ const styles = StyleSheet.create({
 
   // right side of top
   toggleButton: {
-    backgroundColor: '#444',
-    padding: 8,
-    fontSize: 12,
+    width: 50,
+    height: 25,
+    borderRadius: 12.5,
+    justifyContent: 'center',
+    position: 'relative',
+    // backgroundColor: '#444',
+    // padding: 8,
+    // fontSize: 12,
   },
 
-  placeholderText: {
-    color: '#FFFFFF',
-    fontSize: 12,
+  // toggle off
+  toggleOff: {
+    backgroundColor: '#444'
+  },
+  // toggle on
+  toggleOn: {
+    backgroundColor: '#4CAF50',
+  },
+
+  // moving circle inside the toggle
+  toggleCircle: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: '#ffffff',
+    position: 'absolute' // it makes the position of circle to change
+  },
+
+  circleOff: {
+    left: 3,
+  },
+  circleOn: {
+    right: 3,
   },
   
   // buttomSection:
@@ -104,6 +148,5 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 8,
-    // marginBottom:
   },
 });
