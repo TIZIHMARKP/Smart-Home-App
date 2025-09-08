@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import ElectricKettle from './assets/images/electricKettle.jpg'
 import { useState } from 'react';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+import ElectricKettle from './assets/images/electricKettle.jpg'
 
 
 export default function App() {
@@ -18,42 +20,247 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>SMART HOME APP</Text>
 
+       
+        <LinearGradient
+          colors={['#4a4a4a', '#67613eff']}
+          start={{ x: 0.7, y: 0.2}}
+          end={{ x: 1, y: 0.3}}
+          style={styles.deviceCard} >
 
-      <View style={styles.deviceCard}>
+          {/*  top section */}
+          <View style={styles.topSection}>
+            {/* left */}
+            <View style={styles.deviceInfo}>
+              <Text style={styles.deviceName}>Electric Kettle</Text>
+              <Text style={styles.deviceLocation}>Kitchen</Text>
+            </View>
 
-        {/*  top section */}
-        <View style={styles.topSection}>
-          {/* left */}
-          <View style={styles.deviceInfo}>
-            <Text style={styles.deviceName}>Electric Kettle</Text>
-            <Text style={styles.deviceLocation}>Kitchen</Text>
+            {/* right */}
+            <TouchableOpacity style={[
+              styles.toggleButton,
+              isDeviceOn ? styles.toggleOn : styles.toggleOff
+            ]}
+              onPress={handleToggle}
+            >
+              <View style={[styles.toggleCircle, 
+                isDeviceOn ? styles.circleOn : styles.circleOff
+              ]}
+              >
+
+              </View>
+              
+            </TouchableOpacity>
           </View>
 
-          {/* right */}
-          <TouchableOpacity style={[
-            styles.toggleButton,
-            isDeviceOn ? styles.toggleOn : styles.toggleOff
-          ]}
-            onPress={handleToggle}
-          >
-            <View style={[styles.toggleCircle, 
-              isDeviceOn ? styles.circleOn : styles.circleOff
-            ]}
-            >
+          {/* Bottom */}
+          <View style={styles.bottomSection}>
+            <Image
+            source={ElectricKettle}
+            style={styles.deviceImage}
+            />
+          </View>
+        </LinearGradient>
 
+        <LinearGradient
+          colors={['#4a4a4a', '#67613eff']}
+          start={{ x: 0.7, y: 0.2}}
+          end={{ x: 1, y: 0.3}}
+          style={styles.deviceCard} >
+
+          {/*  top section */}
+          <View style={styles.topSection}>
+            {/* left */}
+            <View style={styles.deviceInfo}>
+              <Text style={styles.deviceName}>Electric Kettle</Text>
+              <Text style={styles.deviceLocation}>Kitchen</Text>
             </View>
-             
-          </TouchableOpacity>
-        </View>
 
-        {/* Bottom */}
-        <View style={styles.bottomSection}>
-          <Image
-          source={ElectricKettle}
-          style={styles.deviceImage}
-          />
-        </View>
-      </View>
+            {/* right */}
+            <TouchableOpacity style={[
+              styles.toggleButton,
+              isDeviceOn ? styles.toggleOn : styles.toggleOff
+            ]}
+              onPress={handleToggle}
+            >
+              <View style={[styles.toggleCircle, 
+                isDeviceOn ? styles.circleOn : styles.circleOff
+              ]}
+              >
+
+              </View>
+              
+            </TouchableOpacity>
+          </View>
+
+          {/* Bottom */}
+          <View style={styles.bottomSection}>
+            <Image
+            source={ElectricKettle}
+            style={styles.deviceImage}
+            />
+          </View>
+        </LinearGradient>
+
+        <LinearGradient
+          colors={['#4a4a4a', '#67613eff']}
+          start={{ x: 0.7, y: 0.2}}
+          end={{ x: 1, y: 0.3}}
+          style={styles.deviceCard} >
+
+          {/*  top section */}
+          <View style={styles.topSection}>
+            {/* left */}
+            <View style={styles.deviceInfo}>
+              <Text style={styles.deviceName}>Electric Kettle</Text>
+              <Text style={styles.deviceLocation}>Kitchen</Text>
+            </View>
+
+            {/* right */}
+            <TouchableOpacity style={[
+              styles.toggleButton,
+              isDeviceOn ? styles.toggleOn : styles.toggleOff
+            ]}
+              onPress={handleToggle}
+            >
+              <View style={[styles.toggleCircle, 
+                isDeviceOn ? styles.circleOn : styles.circleOff
+              ]}
+              >
+
+              </View>
+              
+            </TouchableOpacity>
+          </View>
+
+          {/* Bottom */}
+          <View style={styles.bottomSection}>
+            <Image
+            source={ElectricKettle}
+            style={styles.deviceImage}
+            />
+          </View>
+        </LinearGradient>
+
+        <LinearGradient
+          colors={['#4a4a4a', '#67613eff']}
+          start={{ x: 0.7, y: 0.2}}
+          end={{ x: 1, y: 0.3}}
+          style={styles.deviceCard} >
+
+          {/*  top section */}
+          <View style={styles.topSection}>
+            {/* left */}
+            <View style={styles.deviceInfo}>
+              <Text style={styles.deviceName}>Electric Kettle</Text>
+              <Text style={styles.deviceLocation}>Kitchen</Text>
+            </View>
+
+            {/* right */}
+            <TouchableOpacity style={[
+              styles.toggleButton,
+              isDeviceOn ? styles.toggleOn : styles.toggleOff
+            ]}
+              onPress={handleToggle}
+            >
+              <View style={[styles.toggleCircle, 
+                isDeviceOn ? styles.circleOn : styles.circleOff
+              ]}
+              >
+
+              </View>
+              
+            </TouchableOpacity>
+          </View>
+
+          {/* Bottom */}
+          <View style={styles.bottomSection}>
+            <Image
+            source={ElectricKettle}
+            style={styles.deviceImage}
+            />
+          </View>
+        </LinearGradient>
+
+        <LinearGradient
+          colors={['#4a4a4a', '#67613eff']}
+          start={{ x: 0.7, y: 0.2}}
+          end={{ x: 1, y: 0.3}}
+          style={styles.deviceCard} >
+
+          {/*  top section */}
+          <View style={styles.topSection}>
+            {/* left */}
+            <View style={styles.deviceInfo}>
+              <Text style={styles.deviceName}>Electric Kettle</Text>
+              <Text style={styles.deviceLocation}>Kitchen</Text>
+            </View>
+
+            {/* right */}
+            <TouchableOpacity style={[
+              styles.toggleButton,
+              isDeviceOn ? styles.toggleOn : styles.toggleOff
+            ]}
+              onPress={handleToggle}
+            >
+              <View style={[styles.toggleCircle, 
+                isDeviceOn ? styles.circleOn : styles.circleOff
+              ]}
+              >
+
+              </View>
+              
+            </TouchableOpacity>
+          </View>
+
+          {/* Bottom */}
+          <View style={styles.bottomSection}>
+            <Image
+            source={ElectricKettle}
+            style={styles.deviceImage}
+            />
+          </View>
+        </LinearGradient>
+
+        <LinearGradient
+          colors={['#4a4a4a', '#67613eff']}
+          start={{ x: 0.7, y: 0.2}}
+          end={{ x: 1, y: 0.3}}
+          style={styles.deviceCard} >
+
+          {/*  top section */}
+          <View style={styles.topSection}>
+            {/* left */}
+            <View style={styles.deviceInfo}>
+              <Text style={styles.deviceName}>Electric Kettle</Text>
+              <Text style={styles.deviceLocation}>Kitchen</Text>
+            </View>
+
+            {/* right */}
+            <TouchableOpacity style={[
+              styles.toggleButton,
+              isDeviceOn ? styles.toggleOn : styles.toggleOff
+            ]}
+              onPress={handleToggle}
+            >
+              <View style={[styles.toggleCircle, 
+                isDeviceOn ? styles.circleOn : styles.circleOff
+              ]}
+              >
+
+              </View>
+              
+            </TouchableOpacity>
+          </View>
+
+          {/* Bottom */}
+          <View style={styles.bottomSection}>
+            <Image
+            source={ElectricKettle}
+            style={styles.deviceImage}
+            />
+          </View>
+        </LinearGradient>
+        
     </View>
   );
 }
@@ -74,7 +281,7 @@ const styles = StyleSheet.create({
   deviceCard: {
     width: 180,
     height: 170,
-    backgroundColor: '#2d2d2d',
+    // backgroundColor: '#2d2d2d',
     borderRadius: 8,
     marginBottom: 10,
     padding: 10,
