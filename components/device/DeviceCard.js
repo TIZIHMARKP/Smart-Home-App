@@ -7,20 +7,22 @@ import ElectricKettle from '../../assets/images/electricKettle.jpg'
 
 
 
-function DeviceCard(){
+function DeviceCard(props){
 
-    const device = {
-        id: 1,
-        name: "Electric Kettle",
-        room: "Kitchen",
-        image: ElectricKettle,
-    }
+    // const device = {
+    //     id: 1,
+    //     name: "Electric Kettle",
+    //     room: "Kitchen",
+    //     image: ElectricKettle,
+    // }
+
+    const device = props.device;
 
     const [isDeviceOn, setIsDeviceOn] = useState(false);
 
     const handleToggle = () => {
         setIsDeviceOn(!isDeviceOn);
-        console.log(device.name + 'is now: ', !isDeviceOn ? 'ON' : 'Off');
+        console.log(device.name + ' is now: ', !isDeviceOn ? 'ON' : 'Off');
 
     }
 

@@ -11,61 +11,58 @@ import DeviceCard from '../../components/device/DeviceCard'
 
 function DashboarScreen() {
   const devices = [
-    {
-      id: 1,
-      name: "Electric Kettle",
-      status: "off",
-      temperature: 25,
-      room: "Kitchen",
-      image: ElectricKettle,
-    },
-    {
-        id: 2,
-        name: "Coffee machine",
-        status: "off",
-        temperature: 25,
-        room: 'Kitchen',
-        image: coffeeMachine
-    },
-    {
-        id: 3,
-        name: "Rice cooker",
-        status: 'off',
-        temperature: 25,
-        room: 'Kitchen',
-        image: riceCokker
-    },
-    {
-        id: 4,
-        name: 'Washing machine',
-        status: 'off',
-        temperature: 25,
-        room: 'Loundry',
-        image: washingMachine 
-    },
-    {
-        id: 5,
-        name: 'Power Socket',
-        status: 'off',
-        temperature: 25,
-        room: 'Living room',
-        image: powerSocket
-    },
-    {
-        id: 6,
-        name: 'Smart Station',
-        status: 'off',
-        temperature: 25,
-        room: 'Kids room',
-        image: SmartStation
-    }
+  {
+    id: 1,
+    name: "Electric Kettle",
+    room: "Kitchen",
+    image: ElectricKettle,
+    type: "temperature", // temp display is present 4 kettle, so would thing about it 
+    temperature: 25,     // todo
+  },
+  {
+    id: 2,
+    name: "Coffee machine",
+    room: 'Kitchen',
+    image: coffeeMachine,
+    type: "temperature",
+    temperature: 25,
+  },
+  {
+    id: 3,
+    name: "Rice cooker",
+    room: 'Kitchen',
+    image: riceCokker,
+    type: "temperature",
+    temperature: 25,
+  },
+  {
+    id: 4,
+    name: 'Washing machine',
+    room: 'Laundry room', 
+    image: washingMachine,
+    type: "basic" // on/off 
+  },
+  {
+    id: 5,
+    name: 'Power Socket',
+    room: 'Living room',
+    image: powerSocket,
+    type: "basic" //  on/off
+  },
+  {
+    id: 6,
+    name: 'Smart Station',
+    room: 'Kids room',
+    image: SmartStation,
+    type: "basic" // on/off
+  }
+];
 
-  ];
 
 
   return(
     <View style={styles.container}>
-        <DeviceCard />
+        <DeviceCard device = {devices[4]} />
     </View>
   )
 }
