@@ -62,7 +62,14 @@ function DashboarScreen() {
 
   return(
     <View style={styles.container}>
-        <DeviceCard device = {devices[4]} />
+
+        {devices.map((device) => (
+            <DeviceCard
+            key = {devices.id}
+            device = {device}
+        />
+        ))}
+
     </View>
   )
 }
