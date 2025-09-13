@@ -84,8 +84,10 @@ const styles = StyleSheet.create({
   },
   
   deviceCard: {
-    width: 180,
+    flex: 1,
+    maxWidth: 180,
     height: 170,
+    marginHorizontal: 8,
     // backgroundColor: '#2d2d2d',
     borderRadius: 8,
     marginBottom: 10,
@@ -100,9 +102,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   deviceInfo: {
-    // flex: 1
+    flex: 1
   },
   deviceName: {
+    flexWrap: 'wrap',
     fontSize: 16,
     color: '#ffffff',
     fontWeight: 'bold',
