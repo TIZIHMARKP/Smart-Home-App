@@ -18,7 +18,7 @@ function RoomFilter() {
 
     const handleRoomPress = (room) => {
         setActiveRoom(room);
-        console.log('Filter room: ', room);
+        console.log('Selected room: ', room);
     }
 
     return (
@@ -32,7 +32,7 @@ function RoomFilter() {
                         styles.filterButton,
                         activeRoom === room ? styles.activeButton : styles.inactiveButton
                     ]}
-
+                    onPress={() => handleRoomPress(room)}
                 >
                 <Text style={[
                     styles.buttonText,
