@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
 
@@ -24,7 +24,11 @@ function RoomFilter({ onRoomChange }) {  // parent prop(onRoomChange)
 
     return (
         <View style={styles.container}>
-            <View style={styles.buttonRow}>
+            <ScrollView
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.scrollContainer}
+            >
 
             {rooms.map((room) => (
                 <TouchableOpacity
@@ -41,11 +45,10 @@ function RoomFilter({ onRoomChange }) {  // parent prop(onRoomChange)
                     ]}>
                         {room}
                     </Text>
-
                 </TouchableOpacity>
-
             ))}
-            </View>
+
+            </ScrollView>
 
         </View>
     );
@@ -64,6 +67,10 @@ const styles = StyleSheet.create({
         // margin: 10
         // backgroundColor: 'red',
     },
+    scrollContainer:{
+        paddingHorizontal: 0,
+        alignItems: 'center',
+    },
     buttonRow: {
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -75,6 +82,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         marginHorizontal: 2,
         // backgroundColor: 'red',
+        minWidth: 50,
     },
     buttonText: {
         color: '#ffffff',

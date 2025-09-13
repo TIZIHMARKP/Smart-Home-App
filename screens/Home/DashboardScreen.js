@@ -48,35 +48,35 @@ function DashboarScreen() {
     {
       id: 4,
       name: 'Washing machine',
-      room: 'Laundry room',
+      room: 'Laundry Room',
       image: washingMachine,
       type: "basic" // on/off 
     },
     {
       id: 5,
       name: 'Power Socket',
-      room: 'Living room',
+      room: 'Bedroom',
       image: powerSocket,
       type: "basic" //  on/off
     },
     {
       id: 6,
       name: 'Smart Station',
-      room: 'Kids room',
+      room: 'Kids Room',
       image: SmartStation,
       type: "basic" // on/off
     },
     {
       id: 7,
       name: 'White bulb',
-      room: 'Living room',
+      room: 'Living Room',
       image: bulb,
       type: "basic" // on/off
     },
     {
       id: 8,
       name: 'Electric fan',
-      room: 'Parents room',
+      room: 'Living Room',
       image: ElectricFan,
       type: "basic" // on/off
     },
