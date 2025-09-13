@@ -11,7 +11,7 @@ function RoomFilter({ onRoomChange }) {  // parent prop(onRoomChange)
         'Bedroom',
         'Bathroom',
         'Laundry Room',
-        'Kids Room'
+        'Kids Room',
     ];
 
     const [activeRoom, setActiveRoom] = useState('All');

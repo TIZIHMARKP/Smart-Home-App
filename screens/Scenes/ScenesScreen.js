@@ -1,17 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-function VoiceScreen() {
+function ScenesScreen() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.text}> Voice Screen </Text>
+      <Text style={styles.text}>Scenes Screen</Text>
 
     </View>
   );
 }
 
-export default VoiceScreen;
+export default ScenesScreen;
 
 const styles = StyleSheet.create({
   container: {

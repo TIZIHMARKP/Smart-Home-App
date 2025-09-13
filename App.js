@@ -6,6 +6,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import ElectricKettle from './assets/images/electricKettle.jpg'
 import DashboarScreen from './screens/Home/DashboardScreen';
 import BottomTabBar from './components/layout/BottomTabBar';
+import ScenesScreen from './screens/Scenes/ScenesScreen';
+import VoiceScreen from './screens/Voice/VoiceScreen';
 
 
 export default function App() {
@@ -16,7 +18,9 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>SMART HOME APP</Text>
 
-      <DashboarScreen /> 
+      <VoiceScreen />
+      <DashboarScreen />
+      <ScenesScreen />
     </View>
       <BottomTabBar />
     </View>
