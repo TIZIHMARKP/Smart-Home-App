@@ -11,11 +11,15 @@ function BottomTabBar() {
         console.log('Tab pressed: ', tabName);
     };
 
+
+
+
   return (
     <View style={styles.container}>
 
         <TouchableOpacity
             style={styles.tabItem}
+            onPress={() => handleTabPress('Voice')}
         >
             <View style={styles.tabIcon}>
                 <Text style={[
@@ -25,7 +29,8 @@ function BottomTabBar() {
                 </Text>
             </View>
             <Text style={[
-                styles.tabLabel
+                styles.tabLabel,
+                activeTab === 'Voice' ? styles.activeLabel : styles.inactiveLabel
             ]}
             >
                 Voice
@@ -33,7 +38,7 @@ function BottomTabBar() {
         </TouchableOpacity>
         <TouchableOpacity
             style={styles.tabItem}
-
+            onPress={() => handleTabPress('Home')}
         >
             <View style={styles.tabIcon}>
                 <Text style={[
@@ -43,7 +48,9 @@ function BottomTabBar() {
                 </Text>
             </View>
             <Text style={[
-                styles.tabLabel
+                styles.tabLabel,
+                activeTab === 'Home' ? styles.activeLabel : styles.inactiveLabel
+
             ]}
             >
                 Home
@@ -51,7 +58,7 @@ function BottomTabBar() {
         </TouchableOpacity>
         <TouchableOpacity
             style={styles.tabItem}
-
+            onPress={() => handleTabPress('Scenes')}
         >
             <View style={styles.tabIcon}>
                 <Text style={[
@@ -61,7 +68,9 @@ function BottomTabBar() {
                 </Text>
             </View>
             <Text style={[
-                styles.tabLabel
+                styles.tabLabel,
+                activeTab === 'Scenes' ? styles.activeLabel : styles.inactiveLabel
+
             ]}>
                 Scenes
             </Text>
@@ -106,14 +115,14 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   tabLabel: {
-    color: '#fff',
+    // color: '#fff',
     fontSize: 12,
     fontWeight: 500,
   },
   activeLabel: {
     color: '#4ecdc4',
   },
-  activeLabel: {
+  inactiveLabel: {
     color: '#b0b0b0',
   },
 
