@@ -1,14 +1,72 @@
 
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 function BottomTabBar() {
+
+    const [activeTab, setActiveTab ] = useState('Home');
+
+    const handleTabPress = (tabName) => {
+        setActiveTab(tabName);
+        console.log('Tab pressed: ', tabName);
+    };
+
   return (
     <View style={styles.container}>
 
-      <Text style={styles.tabText}>Voice</Text>
-      <Text style={styles.tabText}>Home</Text>
-      <Text style={styles.tabText}>Scenes</Text>
+        <TouchableOpacity
+            style={styles.tabItem}
+        >
+            <View style={styles.tabIcon}>
+                <Text style={[
+                    styles.iconText,
+                ]}>
+                    🎤
+                </Text>
+            </View>
+            <Text style={[
+                styles.tabLabel
+            ]}
+            >
+                Voice
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+            style={styles.tabItem}
+
+        >
+            <View style={styles.tabIcon}>
+                <Text style={[
+                    styles.iconText,
+                ]}>
+                    🏠
+                </Text>
+            </View>
+            <Text style={[
+                styles.tabLabel
+            ]}
+            >
+                Home
+            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+            style={styles.tabItem}
+
+        >
+            <View style={styles.tabIcon}>
+                <Text style={[
+                    styles.iconText,
+                ]}>
+                    ✏️
+                </Text>
+            </View>
+            <Text style={[
+                styles.tabLabel
+            ]}>
+                Scenes
+            </Text>
+        </TouchableOpacity>
+       
 
     </View>
   );
@@ -21,11 +79,43 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#2d2d2d',
     // backgroundColor: '#444',
-    padding: 20,
+    // padding: 20,
+    paddingTop: 10,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#444',
+
     justifyContent: 'space-around',
   },
-  tabText: {
-    color: '#ffffff',
-    fontSize: 16,
+  tabItem: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
+  tabIcon: {
+    marginBottom: 4,
+  },
+  iconText:{
+    fontSize: 20,
+  },
+  activeIcon:{
+    opacity: 1,
+  },
+  inactiveIcon: {
+    opacity: 0.5,
+  },
+  tabLabel: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: 500,
+  },
+  activeLabel: {
+    color: '#4ecdc4',
+  },
+  activeLabel: {
+    color: '#b0b0b0',
+  },
+
+
 });
