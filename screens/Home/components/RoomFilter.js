@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
 
-function RoomFilter() {
+function RoomFilter({ onRoomChange }) {  // parent prop(onRoomChange)
     const rooms = [
         'All',
         'Living Room',
@@ -18,6 +18,7 @@ function RoomFilter() {
 
     const handleRoomPress = (room) => {
         setActiveRoom(room);
+        onRoomChange(room); // tellx dashboardScreen about room change 
         console.log('Selected room: ', room);
     }
 
