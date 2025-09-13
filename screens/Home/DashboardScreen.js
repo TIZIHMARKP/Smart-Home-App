@@ -92,7 +92,7 @@ function DashboarScreen() {
 
   const handleRoomChange = (selectedRoom) => {
     setCurrentRoom(selectedRoom);
-    console.log('DashboardScreen: Room changed to ', selectedRoom)
+    // console.log('DashboardScreen: Room changed to ', selectedRoom)
   }
 
 

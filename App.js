@@ -5,24 +5,20 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import ElectricKettle from './assets/images/electricKettle.jpg'
 import DashboarScreen from './screens/Home/DashboardScreen';
+import BottomTabBar from './components/layout/BottomTabBar';
 
 
 export default function App() {
 
-  const [isDeviceOn, setIsDeviceOn ] = useState(false);
-
-  const handleToggle = () => {
-    setIsDeviceOn(!isDeviceOn) // flipx state to opposite
-    console.log('Device is now: ', !isDeviceOn ? 'On' : 'Off');
-  };
-
   return (
 
+    <View style={{ flex: 1}}>
     <View style={styles.container}>
       <Text style={styles.title}>SMART HOME APP</Text>
 
       <DashboarScreen /> 
-        
+    </View>
+      <BottomTabBar />
     </View>
   );
 }

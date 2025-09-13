@@ -19,7 +19,7 @@ function RoomFilter({ onRoomChange }) {  // parent prop(onRoomChange)
     const handleRoomPress = (room) => {
         setActiveRoom(room);
         onRoomChange(room); // tellx dashboardScreen about room change 
-        console.log('Selected room: ', room);
+        // console.log('Selected room: ', room);
     }
 
     return (
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     },
     inactiveButton:{
         backgroundColor: '#444',
+        // backgroundColor: '#2d2d2d',
     },
     activeText: {
         color: '#ffffff'
