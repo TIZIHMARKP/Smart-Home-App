@@ -18,7 +18,7 @@ export default function App() {
     <NavigationContainer>
 
       <View style={styles.container}>
-        <Text style={styles.title}>SMART HOME APP</Text>
+        {/* <Text style={styles.title}>SMART HOME APP</Text> */}
 
         {/* <VoiceScreen />
         <DashboarScreen />

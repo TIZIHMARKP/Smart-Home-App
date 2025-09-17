@@ -14,6 +14,7 @@ import washingMachine from '../../assets/images/washingMachine.jpg'
 import ElectricFan from '../../assets/images/fan.jpg'
 import bulb from '../../assets/images/bulb.jpg'
 import RoomFilter from './components/RoomFilter'
+import DashboardHeader from './components/DashbaordHeader'
 
 
 function DashboarScreen() {
@@ -99,6 +100,7 @@ function DashboarScreen() {
 
   return (
     <View style={styles.container}>
+      <DashboardHeader /> 
       <RoomFilter  onRoomChange={handleRoomChange}/>
 
       <FlatList
@@ -112,7 +114,6 @@ function DashboarScreen() {
         columnWrapperStyle={styles.row}   // Style for each row
         showsVerticalScrollIndicator={false}
       />
-
     </View>
   )
 }
