@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1a1a1a',
     // paddingHorizontal: 16,
-    paddingTop: 30,
+    paddingTop: 40,
   },
   gridContainer: {
     // flex: 1,
