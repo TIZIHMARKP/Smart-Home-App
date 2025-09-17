@@ -25,7 +25,7 @@ function DashboardHeader(){
                 </TouchableOpacity>
             </View>
 
-            <Text style={styles.title}>SMART HOME</Text>
+            <Text style={styles.title}>SMART HOME APP</Text>
         </View>
     )
 }
@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#1a1a1a',
         paddingHorizontal: 20,
-        paddingTop: -10,
+        paddingTop: 10,
         paddingBottom: 15,
-        marginTop: -25
+        marginTop: 2
     },
     topRow: {
         flexDirection: 'row',

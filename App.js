@@ -1,46 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+// import { StatusBar } from 'expo-status-bar';
+import { useState } from "react";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  StatusBar,
+} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-import ElectricKettle from './assets/images/electricKettle.jpg'
-import DashboarScreen from './screens/Home/DashboardScreen';
-import BottomTabBar from './components/layout/BottomTabBar';
-import ScenesScreen from './screens/Scenes/ScenesScreen';
-import VoiceScreen from './screens/Voice/VoiceScreen';
-import TabNavigator from './navigation/TabNavigator';
-
+import TabNavigator from "./navigation/TabNavigator";
 
 export default function App() {
-
   return (
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="#1a1a1a"
+        translucent={false}
+      />
+      <NavigationContainer>
+        <View style={styles.container}>
+          {/* <Text style={styles.title}>SMART HOME APP</Text> */}
 
-    <NavigationContainer>
-
-      <View style={styles.container}>
-        {/* <Text style={styles.title}>SMART HOME APP</Text> */}
-
-        {/* <VoiceScreen />
-        <DashboarScreen />
-        <ScenesScreen /> */}
-        <TabNavigator />
-      </View>
-        {/* <BottomTabBar /> */}
-
-    </NavigationContainer>
+          <TabNavigator />
+        </View>
+      </NavigationContainer>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a1a1a',
+    backgroundColor: "#1a1a1a",
     padding: 20,
-    paddingTop: 60,
+    // paddingTop: 60,
   },
   title: {
     fontSize: 24,
-    color: '#FFFFFF',
+    color: "#FFFFFF",
     marginBottom: 30,
   },
 });
