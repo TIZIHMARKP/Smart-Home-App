@@ -265,6 +265,7 @@ const styles = StyleSheet.create({
     minHeight: 450,
     alignItems: 'stretch',
   },
+  // ========= TOP
   modalTopSection:{
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -314,7 +315,59 @@ const styles = StyleSheet.create({
   },
   modalCircleOn: {
     right: 3,
-  }
+  },
+
+  // =========== MIDDLE
+  modalMiddleSection: {
+    marginBottom: 30,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    marginBottom: 15,
+  },
+  settingsRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#444',
+  },
+  settingLabel: {
+    fontSize: 16,
+    color: '#b0b0b0',
+  },
+  settingValue: {
+    fontSize: 16,
+    color: '#ffffff',
+    fontWeight: '500',
+  },
+
+  // ========== BOTTOM
+   modalBottomSection: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 'auto', // Pushx to bottom
+  },
+  actionCard: {
+    flex: 1,
+    backgroundColor: '#444',
+    borderRadius: 12,
+    padding: 16,
+    marginHorizontal: 4,
+    alignItems: 'center',
+  },
+  actionIcon: {
+    fontSize: 24,
+    marginBottom: 8,
+  },
+  actionText: {
+    fontSize: 14,
+    color: '#ffffff',
+    fontWeight: '500',
+  },
 
 
 
