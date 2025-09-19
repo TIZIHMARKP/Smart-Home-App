@@ -81,18 +81,67 @@ function DeviceCard(props) {
           <TouchableOpacity
             style={styles.modalBackground}
             onPress={handleCloseModal}
-            activeOpacity={1}
+            // activeOpacity={1}
           >
             <View style={styles.modalContent}>
-              <Text style={styles.modalTitle}>{device.name}</Text>
-              <Text style={styles.modalSubtitle}>{device.room}</Text>
 
-              <TouchableOpacity
-                style={styles.closeButton}
-                onPress={handleCloseModal}
-              >
-                <Text style={styles.closeButtonText}>Close</Text>
-              </TouchableOpacity>
+              {/* =========  TOP ======== */}
+              <View style={styles.modalTopSection}>
+
+                <View style={styles.modalDeviceInfo}>
+                  <Text style={styles.modalDeviceName}>{device.name}</Text>
+                  <Text style={styles.modalDeviceLocation}>{device.room}</Text>
+                </View>
+
+                <TouchableOpacity
+                  style={[
+                    styles.modalToggleButton,
+                    isDeviceOn ? styles.modalToggleOn : styles.modalToggleOff
+                  ]}
+                  onPress={handleToggle}
+                >
+                  <View style={[
+                    styles.modalToggleCircle,
+                    isDeviceOn ? styles.modalCircleOn : styles.modalCircleOff
+                  ]} />
+                </TouchableOpacity>
+              </View>
+
+
+              {/* ======== MIDDLE ========= */}
+              <View style={styles.modalMiddleSection}>
+                <Text style={styles.sectionTitle}>Settings</Text>
+
+                <View style={styles.settingsRow}>
+                  <Text style={styles.settingLabel}>temperature</Text>
+                  <Text style={styles.settingValue}>25°C</Text>
+                </View>
+                <View style={styles.settingsRow}>
+                  <Text style={styles.settingLabel}>Timer</Text>
+                  <Text style={styles.settingValue}>Off</Text>
+                </View>
+              </View>
+
+              {/* ======= BOTTOM ========= */}
+              <View style={styles.modalBottomSection}>
+
+                <TouchableOpacity style={styles.actionCard}>
+                  <Text style={styles.actionIcon}>⏰</Text>
+                  <Text style={styles.actionText}>Timer</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.actionCard}>
+                  <Text style={styles.actionIcon}>🌡️</Text>
+                  <Text style={styles.actionText}>Temp</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.actionCard}>
+                  <Text style={styles.actionIcon}>⚙️</Text>
+                  <Text style={styles.actionText}>Settings</Text>
+                </TouchableOpacity>
+              </View>
+
+               
             </View>
           </TouchableOpacity>
         </View>
@@ -214,30 +263,62 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     padding: 20,
     minHeight: 450,
-    alignItems: 'center',
+    alignItems: 'stretch',
   },
-  modalTitle: {
+  modalTopSection:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 30,
+    paddingBottom: 20,
+    borderBottomWidth: 1,
+    borderBlockColor: '#444'
+  },
+  modalDeviceInfo: {
+    flex: 1,
+  },
+  modalDeviceName: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
     marginBottom: 5,
   },
-  modalSubtitle: {
+  modalDeviceLocation: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#b0b0b0',
-    marginBottom: 30,
+    color: '#B0B0B0',
   },
-  closeButton: {
-    backgroundColor: '#4ecdc4',
-    paddingHorizontal: 30,
-    paddingVertical: 12,
-    borderRadius: 25,
+  modalToggleButton:{
+    width: 60,
+    height: 30,
+    // backgroundColor: 'red',
+    borderRadius: 15,
+    justifyContent: 'center',
+    position: 'relative',
   },
-  closeButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: 'bold',
+  modalToggleOn: {
+    backgroundColor: '#4caf50'
+  },
+  modalToggleOff:{
+    backgroundColor: '#444',
+  },
+  modalToggleCircle:{
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: '#fff',
+    position: 'absolute'
+
+  },
+  modalCircleOff: {
+    left: 3,
+  },
+  modalCircleOn: {
+    right: 3,
   }
+
+
+
+  
+   
 
 });
