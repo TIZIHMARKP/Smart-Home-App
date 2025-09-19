@@ -32,6 +32,7 @@ function ScenesScreen() {
       icon: '👨‍🍳',
       devicesCount: 4,
     },
+     
   ];
 
   const handleScenePress = (scene) => {
