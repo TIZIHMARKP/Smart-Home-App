@@ -62,7 +62,19 @@ function DashboardHeader() {
               </View>
 
               <View style={styles.modalBody}>
-                <Text style={styles.placeHolderText}>Select Device</Text>
+                <Text style={styles.sectionTitle}>Select Device</Text>
+
+                <View style={styles.deviceTypeGrid}>
+                    <TouchableOpacity style={styles.deviceTypeCard}>
+                    <Text style={styles.deviceTypeIcon}> 🔥 </Text>
+                    <Text style={styles.deviceTypeName}>Electric Kettle</Text>
+                  </TouchableOpacity>
+                  
+                  <TouchableOpacity style={styles.deviceTypeCard}>
+                    <Text style={styles.deviceTypeIcon}> ☕ </Text>
+                    <Text style={styles.deviceTypeName}>Coffee Machine</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
 
             </View>
@@ -173,9 +185,37 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  placeHolderText: {
-    color: '#b0b0b0',
-    fontSize: 16,
+  sectionTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBlock: 20,
+    // textAlign: 'center'
+  },
+
+   deviceTypeGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 15,
+    justifyContent: 'space-between',
+  },
+  deviceTypeCard: {
+    width: '40%', // Two columns with small gap
+    backgroundColor: '#444',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    alignItems: 'center',
+  },
+  deviceTypeIcon: {
+    fontSize: 32,
+    marginBottom: 8,
+  },
+  deviceTypeName: {
+    fontSize: 14,
+    color: '#FFFFFF',
+    fontWeight: '500',
+    textAlign: 'center',
   },
 
 });
