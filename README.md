@@ -8,7 +8,7 @@ A modern, cross-platform mobile application built with React Native for managing
 
 
 
-![Dashboard Preview](link-to-your-dashboard-screenshot.png)
+![Dashboard Preview](./assets/screenshots/j18.png)
 
 ## Features
 
@@ -81,7 +81,7 @@ src/
 
     Use the Expo Go app on your phone to scan the QR code, or press `a` for Android simulator / `i` for iOS simulator.
 
-## 🚀 Usage
+## Usage
 
 1. Open the app on your device.
 2. The dashboard will automatically load with your simulated smart devices.
