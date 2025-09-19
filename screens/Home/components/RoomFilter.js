@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
         // alignItems: 's
     },
     activeButton:{
-        backgroundColor: '#323724ff'
+        // backgroundColor: '#323724ff'
+        backgroundColor: '#2e706cff'
     },
     inactiveButton:{
         backgroundColor: '#444',
